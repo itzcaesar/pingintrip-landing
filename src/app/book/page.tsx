@@ -3,8 +3,11 @@
 import { BookingForm } from '@/components/BookingForm';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function BookPage() {
+    const { t } = useLanguage();
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-primary/10 via-white to-secondary/10 pt-42 pb-16 relative overflow-hidden">
             {/* Animated Background Shapes */}
@@ -46,13 +49,13 @@ export default function BookPage() {
                         className="lg:w-1/3 lg:sticky lg:top-32"
                     >
                         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900">
-                            Book Your <br />
+                            {t('booking.title')} <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-                                Lombok Adventure
+                                {t('booking.titlehighlight')}
                             </span>
                         </h1>
                         <p className="text-gray-600 text-lg mb-10 leading-relaxed">
-                            Fill out the form and we&apos;ll confirm your ride within minutes via WhatsApp.
+                            {t('booking.subtitle')}
                         </p>
 
                         <div className="space-y-6">
@@ -66,8 +69,8 @@ export default function BookPage() {
                                     <Phone className="h-5 w-5 text-primary" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-gray-900">Instant Response</h3>
-                                    <p className="text-sm text-gray-500">We reply on WhatsApp in &lt;5 minutes</p>
+                                    <h3 className="font-semibold text-gray-900">{t('booking.features.instant.title')}</h3>
+                                    <p className="text-sm text-gray-500">{t('booking.features.instant.description')}</p>
                                 </div>
                             </motion.div>
 
@@ -81,8 +84,8 @@ export default function BookPage() {
                                     <MapPin className="h-5 w-5 text-yellow-600" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-gray-900">Free Pickup</h3>
-                                    <p className="text-sm text-gray-500">Airport, hotel, or any location</p>
+                                    <h3 className="font-semibold text-gray-900">{t('booking.features.freePickup.title')}</h3>
+                                    <p className="text-sm text-gray-500">{t('booking.features.freePickup.description')}</p>
                                 </div>
                             </motion.div>
 
@@ -96,8 +99,8 @@ export default function BookPage() {
                                     <Clock className="h-5 w-5 text-green-600" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-gray-900">24/7 Support</h3>
-                                    <p className="text-sm text-gray-500">We&apos;re always here for you</p>
+                                    <h3 className="font-semibold text-gray-900">{t('booking.features.support.title')}</h3>
+                                    <p className="text-sm text-gray-500">{t('booking.features.support.description')}</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -116,8 +119,8 @@ export default function BookPage() {
                             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-secondary/30 rounded-full blur-3xl" />
 
                             <div className="relative z-10">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-2">Booking Details</h2>
-                                <p className="text-gray-500 mb-8">All fields marked are required</p>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('booking.form.title')}</h2>
+                                <p className="text-gray-500 mb-8">{t('booking.form.requiredNote')}</p>
                                 <BookingForm />
                             </div>
                         </div>

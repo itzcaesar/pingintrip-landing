@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -27,19 +28,37 @@ const phoneRegex = new RegExp(
     /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
 
-const formSchema = z.object({
-    fullName: z.string().min(2, {
-        message: 'Name must be at least 2 characters.',
-    }),
-    phoneNumber: z.string().regex(phoneRegex, 'Invalid phone number'),
-    vehicleType: z.string().min(1, { message: 'Please select a vehicle type.' }),
-    pickupDate: z.date(),
-    duration: z.string().min(1, 'Duration is required'),
-    pickupLocation: z.string().min(2, 'Pickup location is required'),
-    notes: z.string().optional(),
-});
+enum VehicleType {
+    CAR = 'car',
+    MOTOR = 'motor',
+    VAN = 'van'
+}
+
+type BookingFormValues = {
+    fullName: string;
+    phoneNumber: string;
+    vehicleType: string;
+    pickupDate: Date;
+    duration: string;
+    pickupLocation: string;
+    notes?: string;
+};
 
 export function BookingForm() {
+    const { t } = useLanguage();
+
+    const formSchema = z.object({
+        fullName: z.string().min(2, {
+            message: t('booking.form.requiredNote') as string, // Simplification for now, usually validation msgs also translated
+        }),
+        phoneNumber: z.string().regex(phoneRegex, 'Invalid phone number'),
+        vehicleType: z.string().min(1, { message: 'Please select a vehicle type.' }),
+        pickupDate: z.date(),
+        duration: z.string().min(1, 'Duration is required'),
+        pickupLocation: z.string().min(2, 'Pickup location is required'),
+        notes: z.string().optional(),
+    });
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -54,8 +73,8 @@ export function BookingForm() {
 
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
-        toast.success('Booking Request Sent!', {
-            description: 'We will contact you via WhatsApp shortly to confirm.',
+        toast.success(t('booking.form.successTitle') as string, {
+            description: t('booking.form.successDesc') as string,
         });
         // In a real app, this would POST to an API
     }
@@ -68,9 +87,9 @@ export function BookingForm() {
                     name="fullName"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Full Name</FormLabel>
+                            <FormLabel>{t('booking.form.fullName')}</FormLabel>
                             <FormControl>
-                                <Input placeholder="John Doe" {...field} />
+                                <Input placeholder={t('booking.form.fullNamePlaceholder') as string} {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -83,9 +102,9 @@ export function BookingForm() {
                         name="phoneNumber"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>WhatsApp Number</FormLabel>
+                                <FormLabel>{t('booking.form.whatsapp')}</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="+62 812..." {...field} />
+                                    <Input placeholder={t('booking.form.whatsappPlaceholder') as string} {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -97,17 +116,17 @@ export function BookingForm() {
                         name="vehicleType"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Vehicle Type</FormLabel>
+                                <FormLabel>{t('booking.form.vehicleType')}</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
                                         <SelectTrigger>
-                                            <SelectValue placeholder="Select vehicle" />
+                                            <SelectValue placeholder={t('booking.form.selectVehicle')} />
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        <SelectItem value="car">Car (Toyota Avanza etc.)</SelectItem>
-                                        <SelectItem value="motor">Motorbike (Honda Vario etc.)</SelectItem>
-                                        <SelectItem value="van">Tourist Van (Hiace)</SelectItem>
+                                        <SelectItem value="car">{t('booking.form.vehicles.car')}</SelectItem>
+                                        <SelectItem value="motor">{t('booking.form.vehicles.motor')}</SelectItem>
+                                        <SelectItem value="van">{t('booking.form.vehicles.van')}</SelectItem>
                                     </SelectContent>
                                 </Select>
                                 <FormMessage />
@@ -122,7 +141,7 @@ export function BookingForm() {
                         name="pickupDate"
                         render={({ field }) => (
                             <FormItem className="flex flex-col">
-                                <FormLabel>Pickup Date</FormLabel>
+                                <FormLabel>{t('booking.form.pickupDate')}</FormLabel>
                                 <Popover>
                                     <PopoverTrigger asChild>
                                         <FormControl>
@@ -136,7 +155,7 @@ export function BookingForm() {
                                                 {field.value ? (
                                                     format(field.value, "PPP")
                                                 ) : (
-                                                    <span>Pick a date</span>
+                                                    <span>{t('booking.form.pickADate')}</span>
                                                 )}
                                                 <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                                             </Button>
@@ -164,7 +183,7 @@ export function BookingForm() {
                         name="duration"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Duration (Days)</FormLabel>
+                                <FormLabel>{t('booking.form.duration')}</FormLabel>
                                 <FormControl>
                                     <Input type="number" min="1" placeholder="3" {...field} />
                                 </FormControl>
@@ -179,9 +198,9 @@ export function BookingForm() {
                     name="pickupLocation"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Pickup Location</FormLabel>
+                            <FormLabel>{t('booking.form.pickupLocation')}</FormLabel>
                             <FormControl>
-                                <Input placeholder="Airport / Hotel Name" {...field} />
+                                <Input placeholder={t('booking.form.locationPlaceholder') as string} {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -193,10 +212,10 @@ export function BookingForm() {
                     name="notes"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Additional Notes (Optional)</FormLabel>
+                            <FormLabel>{t('booking.form.notes')}</FormLabel>
                             <FormControl>
                                 <Textarea
-                                    placeholder="Tell us more about your request..."
+                                    placeholder={t('booking.form.notesPlaceholder') as string}
                                     className="resize-none"
                                     {...field}
                                 />
@@ -206,7 +225,7 @@ export function BookingForm() {
                     )}
                 />
 
-                <Button type="submit" size="lg" className="w-full text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all">Submit Booking Request</Button>
+                <Button type="submit" size="lg" className="w-full text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all">{t('booking.form.submit')}</Button>
             </form>
         </Form>
     );
