@@ -1,0 +1,159 @@
+{
+    "nav": {
+        "home": "Beranda",
+        "vehicles": "Kendaraan",
+        "services": "Layanan",
+        "contact": "Kontak",
+        "bookNow": "Pesan Sekarang",
+        "chatWhatsApp": "Chat WhatsApp"
+    },
+    "hero": {
+        "badge": "✨ #1 Rental Mobil & Motor di Lombok",
+        "title1": "Jelajahi Lombok,",
+        "title2": "Dengan Caramu.",
+        "description": "Rasakan kebebasan berwisata dengan armada premium kami. Harga transparan, dukungan 24/7, dan kenangan tak terlupakan.",
+        "bookYourRide": "Pesan Kendaraanmu",
+        "whatsappUs": "WhatsApp Kami",
+        "trustedBy": "Dipercaya oleh",
+        "travelers": "500+ Wisatawan",
+        "rating": "Rating"
+    },
+    "services": {
+        "title": "Layanan Kami",
+        "description": "Semua yang kamu butuhkan untuk liburan sempurna di Lombok. Kami mengurus logistik agar kamu bisa menikmati pemandangan.",
+        "carRental": {
+            "title": "Sewa Mobil",
+            "description": "Mobil bersih dan terawat dengan atau tanpa supir. Cocok untuk perjalanan keluarga."
+        },
+        "motorbikeRental": {
+            "title": "Sewa Motor",
+            "description": "Hindari macet dan jelajahi tempat tersembunyi dengan skuter dan motor andal kami."
+        },
+        "tourPackages": {
+            "title": "Paket Wisata",
+            "description": "Tur custom ke pantai, air terjun, dan situs budaya dengan pemandu lokal berpengalaman."
+        }
+    },
+    "vehicles": {
+        "title": "Kendaraan Populer",
+        "description": "Pilih dari favorit pelanggan kami. Semua kendaraan diservis dan disanitasi secara rutin.",
+        "seats": "Kursi",
+        "perDay": "/ hari",
+        "bookNow": "Pesan Sekarang"
+    },
+    "packages": {
+        "title": "Paket Wisata Populer",
+        "description": "Pengalaman terkurasi untuk membuat perjalananmu tak terlupakan. Semua paket termasuk supir profesional dan kendaraan.",
+        "bestValue": "Terbaik",
+        "bookPackage": "Pesan Paket Ini",
+        "fullDayTour": {
+            "title": "Tur Sehari Penuh Lombok",
+            "description": "Rasakan yang terbaik dari Lombok dalam satu hari. Kunjungi desa tradisional, air terjun, dan pantai menakjubkan.",
+            "features": [
+                "Mobil & Supir Pribadi",
+                "Tiket Masuk Termasuk",
+                "Air Mineral",
+                "Antar-Jemput Hotel"
+            ]
+        },
+        "airportTransfer": {
+            "title": "Transfer Bandara",
+            "description": "Transfer bebas repot dari Bandara Internasional Lombok ke hotel di area Senggigi atau Kuta.",
+            "features": [
+                "Transfer Sekali Jalan",
+                "Kendaraan AC Pribadi",
+                "Supir Berbahasa Inggris",
+                "Bantuan Bagasi"
+            ]
+        },
+        "honeymoon": {
+            "title": "Spesial Honeymoon",
+            "description": "Paket romantis untuk pasangan. Makan malam sunset, tur pantai pribadi, dan lainnya.",
+            "features": [
+                "Makan Malam Romantis",
+                "Tur Perahu Pribadi",
+                "Spa Couple",
+                "Fotografer Profesional"
+            ]
+        }
+    },
+    "whyChoose": {
+        "title": "Mengapa Memilih Pingintrip?",
+        "description": "Kami adalah tim lokal yang bersemangat menunjukkan yang terbaik dari Lombok. Kami bukan hanya menyewakan mobil; kami membantu menciptakan kenangan.",
+        "reasons": [
+            "Ahli lokal Lombok dengan pengalaman 10+ tahun",
+            "Semua kendaraan berusia kurang dari 3 tahun",
+            "Harga transparan - tanpa biaya tersembunyi",
+            "Bantuan darurat 24/7 termasuk",
+            "Pemesanan mudah via WhatsApp atau Website",
+            "Supir berbahasa Inggris tersedia"
+        ]
+    },
+    "testimonials": {
+        "title": "Kata Pelanggan Kami"
+    },
+    "cta": {
+        "title": "Siap Menjelajahi Lombok?",
+        "description": "Pesan kendaraan atau paket wisatamu hari ini. Gunakan kode",
+        "discountCode": "PINGIN10",
+        "discountText": "untuk diskon 10% pemesanan pertamamu!",
+        "bookYourTrip": "Pesan Perjalananmu",
+        "contactSupport": "Hubungi Dukungan"
+    },
+    "footer": {
+        "tagline": "Partner terpercaya untuk menjelajahi Lombok. Rental mobil, motor, dan pemandu wisata.",
+        "company": "Perusahaan",
+        "aboutUs": "Tentang Kami",
+        "servicesTitle": "Layanan",
+        "carRental": "Sewa Mobil",
+        "motorbikeRental": "Sewa Motor",
+        "airportTransfer": "Transfer Bandara",
+        "privateTours": "Tur Pribadi",
+        "contactUs": "Hubungi Kami",
+        "copyright": "Pingintrip. Hak cipta dilindungi."
+    },
+    "booking": {
+        "title": "Pesan",
+        "titlehighlight": "Petualangan Lombokmu",
+        "subtitle": "Isi formulir dan kami akan konfirmasi pesananmu dalam hitungan menit via WhatsApp.",
+        "features": {
+            "instant": {
+                "title": "Respon Cepat",
+                "description": "Kami balas WhatsApp dalam <5 menit"
+            },
+            "freePickup": {
+                "title": "Gratis Antar-Jemput",
+                "description": "Bandara, hotel, atau lokasi manapun"
+            },
+            "support": {
+                "title": "Dukungan 24/7",
+                "description": "Kami selalu ada untukmu"
+            }
+        },
+        "form": {
+            "title": "Detail Pemesanan",
+            "requiredNote": "Semua bidang bertanda wajib diisi",
+            "fullName": "Nama Lengkap",
+            "fullNamePlaceholder": "Budi Santoso",
+            "whatsapp": "Nomor WhatsApp",
+            "whatsappPlaceholder": "+62 812...",
+            "vehicleType": "Tipe Kendaraan",
+            "selectVehicle": "Pilih kendaraan",
+            "pickupDate": "Tanggal Penjemputan",
+            "pickADate": "Pilih tanggal",
+            "duration": "Durasi (Hari)",
+            "pickupLocation": "Lokasi Penjemputan",
+            "locationPlaceholder": "Bandara / Nama Hotel",
+            "notes": "Catatan Tambahan (Opsional)",
+            "notesPlaceholder": "Ceritakan lebih lanjut tentang permintaanmu...",
+            "submit": "Kirim Permintaan Pesanan",
+            "successTitle": "Permintaan Terkirim!",
+            "successDesc": "Kami akan segera menghubungi kamu via WhatsApp untuk konfirmasi.",
+            "vehicles": {
+                "car": "Mobil (Toyota Avanza dsb.)",
+                "motor": "Motor (Honda Vario dsb.)",
+                "van": "Van Wisata (Hiace)"
+            }
+        }
+    }
+}

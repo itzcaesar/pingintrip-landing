@@ -1,0 +1,159 @@
+{
+    "nav": {
+        "home": "Home",
+        "vehicles": "Vehicles",
+        "services": "Services",
+        "contact": "Contact",
+        "bookNow": "Book Now",
+        "chatWhatsApp": "Chat WhatsApp"
+    },
+    "hero": {
+        "badge": "✨ #1 Car & Motor Rental in Lombok",
+        "title1": "Explore Lombok,",
+        "title2": "Your Way.",
+        "description": "Experience the freedom of travel with our premium fleet. Transparent pricing, 24/7 support, and unforgettable memories.",
+        "bookYourRide": "Book Your Ride",
+        "whatsappUs": "WhatsApp Us",
+        "trustedBy": "Trusted by",
+        "travelers": "500+ Travelers",
+        "rating": "Rating"
+    },
+    "services": {
+        "title": "Our Services",
+        "description": "Everything you need for a perfect holiday in Lombok. We take care of the logistics so you can enjoy the view.",
+        "carRental": {
+            "title": "Car Rental",
+            "description": "Clean, well-maintained cars with or without a driver. Perfect for family trips."
+        },
+        "motorbikeRental": {
+            "title": "Motorbike Rental",
+            "description": "Beat the traffic and explore hidden gems with our reliable scooters and motorbikes."
+        },
+        "tourPackages": {
+            "title": "Tour Packages",
+            "description": "Custom tours to beaches, waterfalls, and cultural sites with experienced local guides."
+        }
+    },
+    "vehicles": {
+        "title": "Popular Vehicles",
+        "description": "Choose from our customer favorites. All vehicles are regularly serviced and sanitized.",
+        "seats": "Seats",
+        "perDay": "/ day",
+        "bookNow": "Book Now"
+    },
+    "packages": {
+        "title": "Popular Travel Packages",
+        "description": "Curated experiences to make your trip unforgettable. All packages include a professional driver and vehicle.",
+        "bestValue": "Best Value",
+        "bookPackage": "Book This Package",
+        "fullDayTour": {
+            "title": "Full Day Lombok Tour",
+            "description": "Experience the best of Lombok in one day. Visit traditional villages, waterfalls, and stunning beaches.",
+            "features": [
+                "Private Car & Driver",
+                "Entrance Fees Included",
+                "Mineral Water",
+                "Hotel Pickup & Drop-off"
+            ]
+        },
+        "airportTransfer": {
+            "title": "Airport Transfer",
+            "description": "Hassle-free transfer from Lombok International Airport to your hotel in Senggigi or Kuta areas.",
+            "features": [
+                "One-way Transfer",
+                "Private AC Vehicle",
+                "English Speaking Driver",
+                "Luggage Assistance"
+            ]
+        },
+        "honeymoon": {
+            "title": "Honeymoon Special",
+            "description": "Romantic getaway package designed for couples. Sunset dinners, private beach tours, and more.",
+            "features": [
+                "Romantic Dinner",
+                "Private Boat Tour",
+                "Couple Spa Treatment",
+                "Professional Photographer"
+            ]
+        }
+    },
+    "whyChoose": {
+        "title": "Why Choose Pingintrip?",
+        "description": "We are a local team passionate about showing you the best of Lombok. We don't just rent cars; we help you create memories.",
+        "reasons": [
+            "Local Lombok experts with 10+ years experience",
+            "All vehicles are less than 3 years old",
+            "Transparent pricing - no hidden fees",
+            "24/7 Roadside assistance included",
+            "Easy booking via WhatsApp or Website",
+            "Fluently English-speaking drivers available"
+        ]
+    },
+    "testimonials": {
+        "title": "What Our Clients Say"
+    },
+    "cta": {
+        "title": "Ready to Experience Lombok?",
+        "description": "Book your vehicle or tour package today. Use code",
+        "discountCode": "PINGIN10",
+        "discountText": "for 10% off your first booking!",
+        "bookYourTrip": "Book Your Trip",
+        "contactSupport": "Contact Support"
+    },
+    "footer": {
+        "tagline": "Your trusted partner for exploring Lombok. Car rental, motor rental, and tour guides.",
+        "company": "Company",
+        "aboutUs": "About Us",
+        "servicesTitle": "Services",
+        "carRental": "Car Rental",
+        "motorbikeRental": "Motorbike Rental",
+        "airportTransfer": "Airport Transfer",
+        "privateTours": "Private Tours",
+        "contactUs": "Contact Us",
+        "copyright": "Pingintrip. All rights reserved."
+    },
+    "booking": {
+        "title": "Book Your",
+        "titlehighlight": "Lombok Adventure",
+        "subtitle": "Fill out the form and we'll confirm your ride within minutes via WhatsApp.",
+        "features": {
+            "instant": {
+                "title": "Instant Response",
+                "description": "We reply on WhatsApp in <5 minutes"
+            },
+            "freePickup": {
+                "title": "Free Pickup",
+                "description": "Airport, hotel, or any location"
+            },
+            "support": {
+                "title": "24/7 Support",
+                "description": "We're always here for you"
+            }
+        },
+        "form": {
+            "title": "Booking Details",
+            "requiredNote": "All fields marked are required",
+            "fullName": "Full Name",
+            "fullNamePlaceholder": "John Doe",
+            "whatsapp": "WhatsApp Number",
+            "whatsappPlaceholder": "+62 812...",
+            "vehicleType": "Vehicle Type",
+            "selectVehicle": "Select vehicle",
+            "pickupDate": "Pickup Date",
+            "pickADate": "Pick a date",
+            "duration": "Duration (Days)",
+            "pickupLocation": "Pickup Location",
+            "locationPlaceholder": "Airport / Hotel Name",
+            "notes": "Additional Notes (Optional)",
+            "notesPlaceholder": "Tell us more about your request...",
+            "submit": "Submit Booking Request",
+            "successTitle": "Booking Request Sent!",
+            "successDesc": "We will contact you via WhatsApp shortly to confirm.",
+            "vehicles": {
+                "car": "Car (Toyota Avanza etc.)",
+                "motor": "Motorbike (Honda Vario etc.)",
+                "van": "Tourist Van (Hiace)"
+            }
+        }
+    }
+}
