@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export function Hero() {
+    const { t } = useLanguage();
+
     return (
         <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-white pt-32 md:pt-20">
             {/* Animated Background Shapes */}
@@ -47,29 +50,28 @@ export function Hero() {
                     className="text-left"
                 >
                     <div className="inline-block px-4 py-2 bg-secondary/20 text-yellow-700 rounded-full text-sm font-semibold mb-6">
-                        ✨ #1 Car & Motor Rental in Lombok
+                        {t('hero.badge')}
                     </div>
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-[1.1]">
-                        Explore Lombok, <br />
+                        {t('hero.title1')} <br />
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-600">
-                            Your Way.
+                            {t('hero.title2')}
                         </span>
                     </h1>
                     <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
-                        Experience the freedom of travel with our premium fleet.
-                        Transparent pricing, 24/7 support, and unforgettable memories.
+                        {t('hero.description')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Button asChild size="lg" className="h-14 px-8 text-lg rounded-full shadow-xl shadow-primary/30 hover:shadow-2xl hover:scale-105 transition-all duration-300">
                             <Link href="/book">
-                                Book Your Ride <ArrowRight className="ml-2 h-5 w-5" />
+                                {t('hero.bookYourRide')} <ArrowRight className="ml-2 h-5 w-5" />
                             </Link>
                         </Button>
                         <Button asChild variant="outline" size="lg" className="h-14 px-8 text-lg rounded-full border-2 hover:bg-gray-50 hover:text-primary transition-all duration-300">
                             <Link href="https://wa.me/6281234567890" target="_blank">
                                 <MessageCircle className="mr-2 h-5 w-5 text-green-500" />
-                                WhatsApp Us
+                                {t('hero.whatsappUs')}
                             </Link>
                         </Button>
                     </div>
@@ -102,8 +104,8 @@ export function Hero() {
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">✓</div>
                             <div>
-                                <div className="text-xs text-gray-500 font-medium">Trusted by</div>
-                                <div className="text-sm font-bold text-gray-800">500+ Travelers</div>
+                                <div className="text-xs text-gray-500 font-medium">{t('hero.trustedBy')}</div>
+                                <div className="text-sm font-bold text-gray-800">{t('hero.travelers')}</div>
                             </div>
                         </div>
                     </motion.div>
@@ -116,7 +118,7 @@ export function Hero() {
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold">★</div>
                             <div>
-                                <div className="text-xs text-gray-500 font-medium">Rating</div>
+                                <div className="text-xs text-gray-500 font-medium">{t('hero.rating')}</div>
                                 <div className="text-sm font-bold text-gray-800">4.9 / 5.0</div>
                             </div>
                         </div>

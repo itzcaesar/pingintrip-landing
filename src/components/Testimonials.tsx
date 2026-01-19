@@ -1,6 +1,10 @@
+'use client';
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
+// Testimonials are kept in their original language as they are user quotes
 const TESTIMONIALS = [
     {
         name: 'Sarah Johnson',
@@ -20,11 +24,13 @@ const TESTIMONIALS = [
 ];
 
 export function Testimonials() {
+    const { t } = useLanguage();
+
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight mb-4">What Our Clients Say</h2>
+                    <h2 className="text-3xl font-bold tracking-tight mb-4">{t('testimonials.title')}</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {TESTIMONIALS.map((t) => (

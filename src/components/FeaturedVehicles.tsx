@@ -1,6 +1,9 @@
-import { VehicleCard } from '@/components/VehicleCard';
+'use client';
 
-// Mock data
+import { VehicleCard } from '@/components/VehicleCard';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+// Mock data - vehicle names and prices are not translated as they are product identifiers
 const VEHICLES = [
     {
         name: 'Toyota Avanza',
@@ -29,13 +32,15 @@ const VEHICLES = [
 ];
 
 export function FeaturedVehicles() {
+    const { t } = useLanguage();
+
     return (
         <section id="vehicles" className="py-20 bg-slate-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold tracking-tight mb-4">Popular Vehicles</h2>
+                    <h2 className="text-3xl font-bold tracking-tight mb-4">{t('vehicles.title')}</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Choose from our customer favorites. All vehicles are regularly serviced and sanitized.
+                        {t('vehicles.description')}
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
