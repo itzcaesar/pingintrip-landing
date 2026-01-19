@@ -4,7 +4,6 @@ import { FeaturedVehicles } from '@/components/FeaturedVehicles';
 import { WhyChoose } from '@/components/WhyChoose';
 import { Testimonials } from '@/components/Testimonials';
 import { CTASection } from '@/components/CTASection';
-import { InstagramFeed } from '@/components/InstagramFeed';
 import { TravelPackages } from '@/components/TravelPackages';
 
 export default function Home() {
